@@ -17,6 +17,7 @@ export default function UploadZone({ onUpload, isUploading }) {
     accept: {
       'application/pdf': ['.pdf'],
       'image/*': ['.png', '.jpg', '.jpeg', '.webp'],
+      'text/plain': ['.txt'],
     },
     maxFiles: 1,
     disabled: isUploading,
@@ -65,6 +66,10 @@ export default function UploadZone({ onUpload, isUploading }) {
               <div className="flex items-center space-x-2">
                 <ImageIcon className="w-4 h-4" />
                 <span>Images (JPG, PNG)</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <File className="w-4 h-4" />
+                <span>Text (.txt)</span>
               </div>
             </div>
           </>

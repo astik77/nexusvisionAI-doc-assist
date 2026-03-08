@@ -47,11 +47,13 @@ async def upload_document(file: UploadFile = File(...)):
         
         # Determine mime type
         mime_type = file.content_type
-        if not mime_type:
+        if not mime_type or mime_type == "application/octet-stream":
             if file.filename.endswith(".pdf"):
                 mime_type = "application/pdf"
             elif file.filename.endswith((".png", ".jpg", ".jpeg")):
                 mime_type = f"image/{file.filename.split('.')[-1]}"
+            elif file.filename.endswith(".txt"):
+                mime_type = "text/plain"
             else:
                 raise HTTPException(status_code=400, detail="Unsupported file format")
 
