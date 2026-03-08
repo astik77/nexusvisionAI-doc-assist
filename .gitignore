@@ -1,0 +1,28 @@
+# Security Config
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node / JS
+node_modules/
+dist/
+dist-ssr/
+build/
+.next/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.orig
+.DS_Store
+Thumbs.db
