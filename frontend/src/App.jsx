@@ -69,7 +69,7 @@ function App() {
               <Eye className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-white">
-              Vision-Doc <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">AI</span>
+              NexusVision <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">AI</span>
             </h1>
           </div>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">

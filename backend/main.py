@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
-app = FastAPI(title="Vision-Doc AI", version="1.0.0")
+app = FastAPI(title="NexusVision AI", version="1.0.0")
 
 # Setup CORS to allow requests from the React frontend
 frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173")
@@ -34,7 +34,7 @@ class ChatRequest(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"status": "ok", "message": "Vision-Doc AI Backend is running"}
+    return {"status": "ok", "message": "NexusVision AI Backend is running"}
 
 @app.post("/api/upload")
 async def upload_document(file: UploadFile = File(...)):
