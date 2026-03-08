@@ -4,7 +4,7 @@ import UploadZone from './components/UploadZone';
 import ChatInterface from './components/ChatInterface';
 import { Eye } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001';
+const API_URL = import.meta.env.PROD ? "" : "http://localhost:8001";
 
 function App() {
   const [appState, setAppState] = useState('upload'); // 'upload' | 'chat'
